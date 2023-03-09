@@ -46,7 +46,7 @@ export default function TextForm(props) {
             props.showAlert("warning","Please enter the text.")
         }
         else{
-        setText(text.split(" ").filter(word => word).join(" "))
+        setText(text.split(/\s/).filter(word => word).join(" "))
         props.showAlert("success","Extra Spaces are removed.")
         }
     }
